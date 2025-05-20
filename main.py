@@ -1,13 +1,12 @@
 from stats import *
 import sys
 
-filepath = ''
+filepath = sys.argv[1]
 
 if len(sys.argv) != 2:
     print("Usage: python3 main.py <path_to_book>")
     sys.exit(1)
-elif len(sys.argv) == 2:
-    filepath = sys.argv[1]
+
 
 tail_path = "/".join(filepath.split("/")[-2:])
 contents = read_file(filepath)
